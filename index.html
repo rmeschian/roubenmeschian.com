@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rouben Meschian — Software Architect · AI & Agentic Systems</title>
+<meta name="description" content="Rouben Meschian — software architect and full-stack engineer with 20+ years building enterprise data platforms, knowledge graphs and AI agents.">
+<link rel="canonical" href="https://roubenmeschian.com/">
+<meta property="og:title" content="Rouben Meschian">
+<meta property="og:description" content="Software architect · AI & agentic systems · knowledge graphs · full-stack.">
+<meta property="og:image" content="https://roubenmeschian.com/assets/portrait.jpg">
+<meta property="og:url" content="https://roubenmeschian.com/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Rouben Meschian","url":"https://roubenmeschian.com","jobTitle":"Software Architect","email":"mailto:rmeschian@gmail.com","sameAs":["https://www.linkedin.com/in/roubenmeschian","https://github.com/rmeschian","https://www.youtube.com/user/meschian","https://www.facebook.com/roubenmeschian"],"alumniOf":"Boston University"}
+</script>
+<style>
+:root{
+  --bg:#0b0b0a; --bg2:#121210; --ink:#ecebe6; --mute:#9a988f; --line:#26251f;
+  --accent:#e8a54b; --serif:"Instrument Serif",Georgia,serif;
+  --sans:"Inter Tight",system-ui,-apple-system,sans-serif; --mono:"JetBrains Mono",ui-monospace,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font:400 17px/1.6 var(--sans);-webkit-font-smoothing:antialiased}
+a{color:inherit}
+img{display:block;max-width:100%}
+.wrap{max-width:1180px;margin:0 auto;padding:0 28px}
+.mono{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
+
+/* nav */
+nav{position:fixed;inset:0 0 auto;z-index:10;backdrop-filter:blur(12px);background:rgba(11,11,10,.7);border-bottom:1px solid transparent;transition:border-color .3s}
+nav.scrolled{border-color:var(--line)}
+nav .wrap{display:flex;justify-content:space-between;align-items:center;height:64px}
+nav .logo{font-family:var(--serif);font-size:24px;text-decoration:none}
+nav ul{display:flex;gap:28px;list-style:none}
+nav ul a{text-decoration:none;font-size:14px;color:var(--mute);transition:color .2s}
+nav ul a:hover{color:var(--ink)}
+
+/* hero */
+.hero{height:100vh;min-height:640px;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:20px;padding-top:64px;position:relative}
+.hero-text{padding:40px 0}
+.hero h1{font-family:var(--serif);font-weight:400;font-size:clamp(56px,9vw,128px);line-height:.92;letter-spacing:-.02em}
+.hero h1 em{color:var(--accent)}
+.hero .role{margin:28px 0 22px;font-size:clamp(18px,2vw,22px);max-width:34ch;color:#cfcdc6}
+.hero .links{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border:1px solid var(--line);border-radius:999px;text-decoration:none;font-size:14px;transition:all .2s}
+.btn:hover{border-color:var(--ink)}
+.btn.primary{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.btn.primary:hover{background:var(--accent);border-color:var(--accent)}
+.hero-img{align-self:end;height:min(76vh,820px);margin-right:-8vw;display:flex;justify-content:flex-end;position:relative;z-index:-1}
+.hero-img img{height:100%;width:auto;max-width:none}
+
+/* sections */
+section{padding:120px 0;border-top:1px solid var(--line)}
+.sec-head{display:grid;grid-template-columns:220px 1fr;gap:40px;margin-bottom:56px}
+.sec-head h2{font-family:var(--serif);font-weight:400;font-size:clamp(40px,5vw,64px);line-height:1}
+.lede{font-family:var(--serif);font-size:clamp(26px,3vw,38px);line-height:1.25;max-width:24ch*2}
+.lede em{color:var(--accent)}
+.two{display:grid;grid-template-columns:220px 1fr;gap:40px}
+.about-body p{color:#cfcdc6;max-width:62ch;margin-top:22px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);margin-top:64px;border-top:1px solid var(--line)}
+.stat{padding:28px 20px 0 0}
+.stat b{display:block;font-family:var(--serif);font-weight:400;font-size:56px;line-height:1}
+.stat span{font-size:14px;color:var(--mute)}
+
+/* experience */
+.job{display:grid;grid-template-columns:220px 1fr;gap:40px;padding:36px 0;border-top:1px solid var(--line)}
+.job:first-child{border-top:0;padding-top:0}
+.job .when{font-family:var(--mono);font-size:12px;color:var(--mute);letter-spacing:.04em;padding-top:8px}
+.job h3{font-family:var(--serif);font-weight:400;font-size:32px;line-height:1.1}
+.job h3 small{font-family:var(--sans);font-size:15px;color:var(--mute);display:block;margin-top:6px}
+.job ul{list-style:none;margin-top:16px;color:#cfcdc6;max-width:70ch}
+.job li{position:relative;padding-left:20px;margin-top:8px;font-size:16px}
+.job li::before{content:"";position:absolute;left:0;top:.72em;width:8px;height:1px;background:var(--accent)}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px}
+.tags span{font-family:var(--mono);font-size:11px;padding:4px 10px;border:1px solid var(--line);border-radius:999px;color:var(--mute)}
+details.older summary{cursor:pointer;list-style:none;padding:28px 0;border-top:1px solid var(--line);font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--mute)}
+details.older summary:hover{color:var(--ink)}
+details.older summary::-webkit-details-marker{display:none}
+details.older[open] summary .plus{display:inline-block;transform:rotate(45deg)}
+.plus{transition:transform .2s;display:inline-block;margin-right:8px}
+
+/* skills */
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line)}
+.skill{background:var(--bg);padding:32px 28px}
+.skill h4{font-family:var(--mono);font-weight:500;font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:14px}
+.skill p{color:#cfcdc6;font-size:15px}
+
+/* speaking band */
+.band{padding:0;border-top:1px solid var(--line)}
+.band-media{position:relative}
+.band img{width:100%;aspect-ratio:16/9;height:auto;object-fit:cover;object-position:center top;filter:contrast(1.05) brightness(.88)}
+.band-media::after{content:"";position:absolute;inset:0;background:linear-gradient(200deg,rgba(11,11,10,.92) 0%,rgba(11,11,10,.75) 28%,transparent 55%);pointer-events:none}
+.band .cap{position:absolute;top:0;right:0;width:min(46%,600px);padding:clamp(32px,6vw,96px) clamp(28px,5vw,80px) 0 0;z-index:1}
+.band blockquote{font-family:var(--serif);font-size:clamp(28px,3.4vw,52px);line-height:1.1}
+.cap-body{margin:20px 0 28px;color:#d8d6cf;font-size:clamp(15px,1.15vw,18px);max-width:44ch}
+.band .btn{background:rgba(11,11,10,.5)}
+
+/* community / patents / edu */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
+.card h3{font-family:var(--serif);font-weight:400;font-size:28px;line-height:1.15;margin:10px 0 10px}
+.card p{color:#cfcdc6;font-size:15px}
+.list{list-style:none}
+.list li{padding:20px 0;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:24px;align-items:baseline}
+.list li:last-child{border-bottom:1px solid var(--line)}
+.list .t{font-size:18px}
+.list .m{font-family:var(--mono);font-size:12px;color:var(--mute);white-space:nowrap}
+
+/* contact */
+.contact{text-align:left;padding:140px 0 60px}
+.contact h2{font-family:var(--serif);font-weight:400;font-size:clamp(56px,10vw,150px);line-height:.9;letter-spacing:-.02em}
+.contact h2 a{text-decoration:none;transition:color .2s}
+.contact h2 a:hover{color:var(--accent)}
+.contact .links{display:flex;gap:12px;flex-wrap:wrap;margin-top:40px}
+footer{border-top:1px solid var(--line);padding:28px 0;color:var(--mute);font-size:13px}
+footer .wrap{display:flex;justify-content:space-between}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}html{scroll-behavior:auto}}
+
+@media (max-width:900px){
+  nav ul{display:none}
+  .hero{grid-template-columns:1fr;height:auto;min-height:auto;padding-top:96px;gap:0}
+  .hero-text{padding-bottom:40px;order:2}
+  .hero-img{order:1;margin:0 -28px;height:auto;justify-content:center}
+  .hero-img img{width:100%;height:auto}
+  .sec-head,.two,.job{grid-template-columns:1fr;gap:12px}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .skills,.grid3{grid-template-columns:1fr}
+  section{padding:80px 0}
+  .list li{flex-direction:column;gap:4px}
+  .band{padding-bottom:64px}
+  .band img{aspect-ratio:4/3}
+  .band-media::after{display:none}
+  .band .cap{position:static;width:auto;padding:28px 28px 0}
+}
+</style>
+</head>
+<body>
+
+<nav id="nav"><div class="wrap">
+  <a href="#top" class="logo">Rouben Meschian</a>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#work">Work</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#community">Community</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</div></nav>
+
+<header class="wrap hero" id="top">
+  <div class="hero-text">
+    <p class="mono">Software Architect · AI &amp; Agentic Systems · Full-Stack</p>
+    <h1 style="margin-top:22px">Rouben<br><em>Meschian</em></h1>
+    <p class="role">Twenty years designing, building and modernizing enterprise data platforms — from RDF quad stores and SPARQL to the pixels on screen. Now building AI agents that are grounded in real data.</p>
+    <div class="links">
+      <a class="btn primary" href="mailto:rmeschian@gmail.com">Get in touch →</a>
+      <a class="btn" href="assets/Rouben_Meschian_Resume.pdf" target="_blank" rel="noopener">Résumé (PDF)</a>
+      <a class="btn" href="https://www.linkedin.com/in/roubenmeschian" target="_blank" rel="noopener">LinkedIn</a>
+      <a class="btn" href="https://github.com/rmeschian" target="_blank" rel="noopener">GitHub</a>
+      <a class="btn" href="https://www.youtube.com/user/meschian" target="_blank" rel="noopener">YouTube</a>
+    </div>
+  </div>
+  <div class="hero-img"><img src="assets/portrait.jpg" alt="Portrait of Rouben Meschian" width="1500" height="1431"></div>
+</header>
+
+<section id="about"><div class="wrap">
+  <div class="two reveal">
+    <p class="mono">01 — About</p>
+    <div class="about-body">
+      <p class="lede">I design systems across the whole stack and across data models — <em>graph, document and relational</em> — and turn legacy platforms into modern architectures.</p>
+      <p>I was one of the founding engineers of Anzo at Cambridge Semantics, where I spent sixteen years building the client-side platform that every Anzo application ran on. Today I'm frontend architect and core full-stack engineer on Siemens Graph Studio, an enterprise knowledge-graph platform with billions of triples in production.</p>
+      <p>I'm an early and heavy adopter of AI-assisted engineering — spec-driven development with Claude Code, Copilot-driven modernization, and hands-on work on AI agents and custom Claude skills. Clear thinking turns into precise specifications, and precise specifications turn into high-leverage prompts.</p>
+    </div>
+  </div>
+  <div class="stats reveal">
+    <div class="stat"><b>20+</b><span>years in software</span></div>
+    <div class="stat"><b>16</b><span>years building Anzo</span></div>
+    <div class="stat"><b>3</b><span>IBM patents &amp; filings</span></div>
+    <div class="stat"><b>&lt;3 mo</b><span>spec to working system with Claude Code</span></div>
+  </div>
+</div></section>
+
+<section id="work"><div class="wrap">
+  <div class="sec-head reveal"><p class="mono">02 — Work</p><h2>Selected experience</h2></div>
+
+  <div class="jobs">
+    <article class="job reveal">
+      <p class="when">Apr 2026 — Present</p>
+      <div>
+        <h3>Palinomia<small>Founder &amp; Architect · Natural-language business intelligence</small></h3>
+        <ul>
+          <li>Built a natural-language BI platform end-to-end: operators ask plain-English questions of their own data and get validated charts, KPIs and dashboards — spec to working system in under three months with Claude Code.</li>
+          <li>Polyglot data layer: federated SQL via Trino, a virtual RDF knowledge graph via Ontop, an Oxigraph triple store and PostgreSQL, plus a Python FastAPI service for ontology alignment and ML entity resolution.</li>
+          <li>A backend agent that grounds every answer in the data — a tool-use loop that self-validates each cited figure against result rows. Provider-agnostic across Anthropic, OpenAI and local models via Ollama.</li>
+          <li>3-pass query validation, OpenTelemetry tracing, row-level security, 7-container Docker deployment with CI/CD.</li>
+        </ul>
+        <div class="tags"><span>Node.js</span><span>Trino</span><span>Ontop</span><span>Oxigraph</span><span>PostgreSQL</span><span>FastAPI</span><span>AI agents</span></div>
+      </div>
+    </article>
+
+    <article class="job reveal">
+      <p class="when">Jan 2026 — Present</p>
+      <div>
+        <h3>Siemens Digital Industries Software<small>Consulting Engineer · Siemens Graph Studio</small></h3>
+        <ul>
+          <li>Core full-stack engineer and frontend architect on an enterprise knowledge-graph platform with billions of RDF triples in production.</li>
+          <li>Steward the frontend framework, delta tracking, offline-first sync and change replication as the platform scales under Siemens.</li>
+          <li>Build AI-agent integration and LLM features, including Graph Studio Copilot and automated ontology generation; lead AI-assisted modernization from legacy JavaScript to TypeScript with Vitest and Cypress.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="job reveal">
+      <p class="when">Apr 2024 — Jan 2026</p>
+      <div>
+        <h3>Altair<small>Consulting Engineer · Altair Graph Studio</small></h3>
+        <ul>
+          <li>Designed a purpose-built frontend framework for the full client-side lifecycle of RDF data — fetching, in-memory storage, querying and editing at enterprise scale.</li>
+          <li>Architected offline-first storage and sync: local edits captured as deltas, persisted, replicated and reconciled against the remote graph.</li>
+          <li>Designed and built Altair Copilot — an LLM-driven natural-language interface over linked data — and the Network Navigator for graph exploration.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="job reveal">
+      <p class="when">Apr 2007 — Dec 2023</p>
+      <div>
+        <h3>Cambridge Semantics<small>Founding Software Engineer / Consultant · Anzo · Boston</small></h3>
+        <ul>
+          <li>One of the founding engineers of Anzo, an enterprise data-management and analytics platform built on semantic-web technologies.</li>
+          <li>Led the client-side libraries, core infrastructure and AnzoJS — a pluggable application framework modeled on the Eclipse RCP that every Anzo web app was built on.</li>
+          <li>Delivered customer projects for enterprises including Johnson &amp; Johnson, Staples and Merck.</li>
+        </ul>
+      </div>
+    </article>
+
+    <details class="older">
+      <summary><span class="plus">+</span>Earlier work — Cognaize, Haivision, OpenExchange, IBM</summary>
+      <article class="job">
+        <p class="when">Feb 2022 — Sep 2022</p>
+        <div><h3>Cognaize<small>Consulting Engineer &amp; Architect · AI document processing</small></h3>
+        <ul><li>Architected a Node.js/MongoDB backend with a Java OCR microservice on AWS; built table annotation for the core product and took the app from unusable to fast.</li></ul></div>
+      </article>
+      <article class="job">
+        <p class="when">Dec 2018 — Jan 2020</p>
+        <div><h3>Haivision<small>Consulting Engineer · Enterprise video streaming</small></h3>
+        <ul><li>Built the frontend of a streaming management product, including a layout editor for multi-region content streams.</li></ul></div>
+      </article>
+      <article class="job">
+        <p class="when">Dec 2013 — Feb 2015</p>
+        <div><h3>OpenExchange<small>Consulting Engineer &amp; Architect · Virtual meetings</small></h3>
+        <ul><li>Architected backend, REST APIs and SQL Server data layer; built the frontend and owned API contracts with a distributed team.</li></ul></div>
+      </article>
+      <article class="job">
+        <p class="when">Jun 2004 — Jan 2007</p>
+        <div><h3>IBM<small>Software Engineer · Advanced Internet Technology Group</small></h3>
+        <ul><li>R&amp;D on IBM's Semantic Middleware Platform: a Fresnel Lens renderer, semantic data binding for SWT, the CViT dashboard on Eclipse RCP, and the admin tool for the Boca Linked Data server.</li></ul></div>
+      </article>
+    </details>
+  </div>
+</div></section>
+
+<section id="skills"><div class="wrap">
+  <div class="sec-head reveal"><p class="mono">03 — Skills</p><h2>What I work with</h2></div>
+  <div class="skills reveal">
+    <div class="skill"><h4>AI Engineering</h4><p>Claude Code &amp; spec-driven development, GitHub Copilot, AI agents, custom Claude skills, natural-language query, RAG over graphs.</p></div>
+    <div class="skill"><h4>Architecture</h4><p>API &amp; system design, distributed systems, offline-first sync &amp; change replication, service decomposition, legacy modernization.</p></div>
+    <div class="skill"><h4>Data</h4><p>Graph &amp; RDF stores, SPARQL, OWL, MongoDB, PostgreSQL, SQL Server, Trino federation.</p></div>
+    <div class="skill"><h4>Languages</h4><p>TypeScript / JavaScript, Java, Python.</p></div>
+    <div class="skill"><h4>Full-Stack</h4><p>Frontend frameworks &amp; architecture, data visualization, backend services, REST APIs, data pipelines.</p></div>
+    <div class="skill"><h4>Leadership</h4><p>Technical strategy, architecture review, cross-team collaboration, mentoring and technical communication.</p></div>
+  </div>
+</div></section>
+
+<section class="band" aria-label="Speaking">
+  <div class="band-media">
+    <img src="assets/speaking.jpg" alt="Rouben Meschian speaking to a full auditorium" loading="lazy" width="1800" height="1350">
+    <div class="cap">
+      <p class="mono" style="margin-bottom:16px">Speaking &amp; teaching</p>
+      <blockquote>Clear communication is an engineering skill.</blockquote>
+      <p class="cap-body">I speak and teach on software architecture, JavaScript, knowledge graphs and AI-assisted engineering — on stage at JS Conf Armenia and in lecture halls, and through the Art of Programming series on YouTube.</p>
+      <a class="btn" href="https://www.youtube.com/user/meschian" target="_blank" rel="noopener">Watch on YouTube →</a>
+    </div>
+  </div>
+</section>
+
+<section id="community"><div class="wrap">
+  <div class="sec-head reveal"><p class="mono">04 — Community</p><h2>Beyond the day job</h2></div>
+  <div class="grid3 reveal">
+    <div class="card"><p class="mono">Co-founder</p><h3>JS Conf Armenia</h3><p>Helped bring the JavaScript conference to Armenia, connecting the local developer community with the global one.</p></div>
+    <div class="card"><p class="mono">Board member</p><h3>YerevaNN</h3><p>Board member at YerevaNN, a non-profit machine learning research lab in Yerevan.</p></div>
+    <div class="card"><p class="mono">Languages</p><h3>English · Armenian · Russian</h3><p>Native in English and Armenian; elementary Russian.</p></div>
+  </div>
+
+  <div class="two reveal" style="margin-top:96px">
+    <p class="mono">Patents</p>
+    <ul class="list">
+      <li><span class="t">Automatic creation of pre-condition queries for conflict detection in distributed processing systems</span><span class="m">US 8,364,690 · IBM</span></li>
+      <li><span class="t">Method and apparatus for graphically displaying compatible workflow steps</span><span class="m">US 7,519,917 · IBM</span></li>
+      <li><span class="t">Conflict resolution for distributed processing systems</span><span class="m">US App. 2008/0077628 · IBM</span></li>
+    </ul>
+  </div>
+  <div class="two reveal" style="margin-top:56px">
+    <p class="mono">Education</p>
+    <ul class="list">
+      <li><span class="t">M.A., Computer Science — Boston University</span><span class="m">2003 – 2005</span></li>
+      <li><span class="t">B.A., Computer Science — Boston University</span><span class="m">1999 – 2003</span></li>
+    </ul>
+  </div>
+</div></section>
+
+<section id="contact" class="contact"><div class="wrap reveal">
+  <p class="mono" style="margin-bottom:24px">05 — Contact</p>
+  <h2><a href="mailto:rmeschian@gmail.com">Let's<br>talk.</a></h2>
+  <div class="links">
+    <a class="btn primary" href="mailto:rmeschian@gmail.com">rmeschian@gmail.com</a>
+    <a class="btn" href="https://www.linkedin.com/in/roubenmeschian" target="_blank" rel="noopener">LinkedIn</a>
+    <a class="btn" href="https://github.com/rmeschian" target="_blank" rel="noopener">GitHub</a>
+    <a class="btn" href="https://www.youtube.com/user/meschian" target="_blank" rel="noopener">YouTube</a>
+    <a class="btn" href="https://www.facebook.com/roubenmeschian" target="_blank" rel="noopener">Facebook</a>
+    <a class="btn" href="assets/Rouben_Meschian_Resume.pdf" target="_blank" rel="noopener">Résumé</a>
+  </div>
+</div></section>
+
+<footer><div class="wrap"><span>© <span id="yr">2026</span> Rouben Meschian</span><span>roubenmeschian.com</span></div></footer>
+
+<script>
+document.getElementById('yr').textContent=new Date().getFullYear();
+const nav=document.getElementById('nav');
+addEventListener('scroll',()=>nav.classList.toggle('scrolled',scrollY>10),{passive:true});
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
